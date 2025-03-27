@@ -7,9 +7,6 @@
 
   console.keyMap = "fr";
 
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
-
   documentation.nixos.enable = false;
   system.stateVersion = "24.11";
 }

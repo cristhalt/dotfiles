@@ -12,7 +12,7 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
     catppuccin-wallpapers = {
-      url = "github:zhichaoh/catppuccin-wallpapers";
+      url = "github:orangci/walls-catppuccin-mocha";
       flake = false;
     };
   };

@@ -2,10 +2,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload =
-        [ "${inputs.catppuccin-wallpapers}/landscapes/Cloudsnight.jpg" ];
-      wallpaper =
-        ", ${inputs.catppuccin-wallpapers}/landscapes/Cloudsnight.jpg";
+      preload = [ "${inputs.catppuccin-wallpapers}/hollow-knight.jpg" ];
+      wallpaper = ", ${inputs.catppuccin-wallpapers}/hollow-knight.jpg";
     };
   };
 }
