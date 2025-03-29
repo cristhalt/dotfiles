@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   wayland.windowManager.hyprland.settings = {
     "$mod" = "Super_L";
 
@@ -9,7 +10,7 @@
     ];
 
     bind = [
-      "$mod Shift_L, e, exec, pkill Hyprland"
+      "Control_L Alt_L, Delete, exec, hyprctl dispatch exit"
       "$mod, q, killactive,"
       "$mod, f, fullscreen,"
       "$mod, g, togglegroup,"
@@ -46,7 +47,7 @@
       "$mod Shift_L, agrave, movetoworkspace, 10"
 
       # Programs
-      "$mod, space, exec, pkill rofi || rofi -show drun"
+      "$mod, r, exec, pkill rofi || rofi -show drun"
       "Control_L Alt_L, t, exec, kitty"
     ];
   };

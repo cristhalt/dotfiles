@@ -1,3 +1,9 @@
-{ ... }: {
-  imports = [ ./hyprland/default.nix ./hyprpaper.nix ./rofi.nix ./waybar.nix ];
+{ ... }:
+{
+  imports = [
+    ./hyprland/default.nix
+    ./hyprpaper.nix
+    ./rofi.nix
+    ./theme.nix
+  ];
 }

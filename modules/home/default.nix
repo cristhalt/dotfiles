@@ -1,8 +1,8 @@
-{ ... }: {
+{ ... }:
+{
   imports = [
-    ./program/default.nix
+    ./programs/default.nix
     ./wayland/default.nix
-    ./theme.nix
     ./zsh.nix
     ./dev.nix
   ];

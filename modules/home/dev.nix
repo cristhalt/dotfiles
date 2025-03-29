@@ -1,7 +1,18 @@
-{ inputs, pkgs, ... }: {
+{ inputs, pkgs, ... }:
+{
+  programs.git = {
+    enable = true;
+    userName = "cristhalt";
+    userEmail = "203342643+cristhalt@users.noreply.github.com ";
+  };
+
   programs.zed-editor = {
     enable = true;
-    extensions = [ "nix" "toml" "catppuccin" ];
+    extensions = [
+      "nix"
+      "toml"
+      "catppuccin"
+    ];
 
     userSettings = {
       ui_font_size = 16;
@@ -19,15 +30,31 @@
         nixd = {
           binary.path_lookup = true;
           initialization_options = {
-            formatting = { command = [ "nixfmt" "--quiet" "--" ]; };
+            formatting = {
+              command = [
+                "nixfmt"
+                "--quiet"
+                "--"
+              ];
+            };
           };
         };
       };
 
-      languages = { Nix = { language_servers = [ "nixd" "!nil" ]; }; };
+      languages = {
+        Nix = {
+          language_servers = [
+            "nixd"
+            "!nil"
+          ];
+        };
+      };
     };
   };
 
-  home.packages = with pkgs; [ nixfmt-rfc-style nixd ];
+  home.packages = with pkgs; [
+    nixfmt-rfc-style
+    nixd
+  ];
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 }

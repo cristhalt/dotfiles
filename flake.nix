@@ -10,16 +10,16 @@
     };
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-
-    catppuccin-wallpapers = {
-      url = "github:orangci/walls-catppuccin-mocha";
-      flake = false;
-    };
   };
 
-  outputs = { nixpkgs, ... }@inputs:
+  outputs =
+    { nixpkgs, ... }@inputs:
     let
-      mkSystem = { hostname, system ? "x86_64-linux", }:
+      mkSystem =
+        {
+          hostname,
+          system ? "x86_64-linux",
+        }:
         nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit inputs;
@@ -30,9 +30,10 @@
             ./modules/default.nix
           ];
         };
-    in {
+    in
+    {
       nixosConfigurations = {
-        laptop-victus = mkSystem { hostname = "laptop-victus"; };
+        hp-victus = mkSystem { hostname = "hp-victus"; };
         kvm-guest = mkSystem { hostname = "kvm-guest"; };
       };
     };

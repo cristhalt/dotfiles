@@ -1,8 +1,19 @@
-{ pkgs, ... }: {
-  programs.hyprland.enable = true;
+{ pkgs, ... }:
+{
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+  };
 
   xdg.portal = {
     enable = true;
-    extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
+    config.hyprland.preferred = [
+      "hyprland"
+      "gtk"
+    ];
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-gtk
+    ];
   };
 }

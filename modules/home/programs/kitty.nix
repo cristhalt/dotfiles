@@ -1,10 +1,11 @@
-{ ... }: {
+{ ... }:
+{
   programs.kitty = {
     enable = true;
     settings = {
       confirm_os_window_close = 0;
       font_family = "JetBrainsMono Nerd Font";
-      window_padding_width = 5;
+      window_padding_width = 6;
     };
     extraConfig = ''
       # The basic colors

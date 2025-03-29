@@ -1,12 +1,13 @@
-{ ... }: {
-  imports = [ ./keybind.nix ./visual.nix ];
+{ ... }:
+{
+  imports = [
+    ./keybind.nix
+    ./visual.nix
+  ];
 
   wayland.windowManager.hyprland = {
     enable = true;
-
     settings = {
-      exec-once = [ "waybar" "hyprpaper" ];
-
       input = {
         kb_layout = "fr";
         touchpad = {
@@ -15,8 +16,6 @@
           drag_lock = true;
         };
       };
-
-      env = [ "HYPRCURSOR_THEME,Bibata-Modern-Ice" ];
     };
   };
 }
