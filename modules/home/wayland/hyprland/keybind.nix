@@ -10,7 +10,7 @@
     ];
 
     bind = [
-      "Control_L Alt_L, Delete, exec, hyprctl dispatch exit"
+      "Control_L Alt_L, Delete, exec, loginctl terminate-user \"\""
       "$mod, q, killactive,"
       "$mod, f, fullscreen,"
       "$mod, g, togglegroup,"
@@ -46,9 +46,14 @@
       "$mod Shift_L, ccedilla, movetoworkspace, 9"
       "$mod Shift_L, agrave, movetoworkspace, 10"
 
+      # Sound
+      ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+      ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+
       # Programs
-      "$mod, r, exec, pkill rofi || rofi -show drun"
-      "Control_L Alt_L, t, exec, kitty"
+      "$mod, r, exec, pkill rofi || rofi -show drun -run-command \"uwsm app -- {cmd}\""
+      "Control_L Alt_L, t, exec, uwsm app -- kitty"
     ];
   };
 }

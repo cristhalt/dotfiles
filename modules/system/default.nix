@@ -4,7 +4,7 @@
     ./users.nix
     ./locale.nix
     ./hyprland.nix
-    ./dm.nix
+    ./greeter.nix
   ];
 
   networking.networkmanager.enable = true;
