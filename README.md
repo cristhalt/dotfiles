@@ -1,0 +1,1 @@
+# Cristhalt NixOS configuration
