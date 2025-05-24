@@ -1,7 +1,8 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: {
   imports = [
     ./users.nix
     ./locale.nix
+    ./fonts.nix
   ];
 
   # Graphics
@@ -35,7 +36,7 @@
     enable = true;
     waylandCompositors.hyprland = {
       prettyName = "Hyprland";
-      binPath = "${pkgs.hyprland}/bin/Hyprland";
+      binPath = lib.getExe pkgs.hyprland;
     };
   };
 
