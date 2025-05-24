@@ -42,6 +42,7 @@
   in {
     nixosConfigurations = {
       qemu = mkHost "qemu" "x86_64-linux" [];
+      laptop-victus = mkHost "laptop-victus" "x86_64-linux" [];
     };
   };
 }

@@ -1,14 +1,17 @@
 { inputs, system, pkgs, ... }: {
   imports = [
-    ./cli/default.nix
+    ./kitty.nix
     ./wayland/default.nix
-    ./zed.nix
+    ./dev/default.nix
   ];
 
   home.packages = [
+    pkgs.brightnessctl
     pkgs.nautilus
     inputs.zen-browser.packages."${system}".default
   ];
+
+  programs.micro.enable = true;
 
   home.stateVersion = "25.05";
 }
