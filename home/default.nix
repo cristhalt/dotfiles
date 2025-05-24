@@ -1,5 +1,8 @@
 { ... }: {
-  imports = [ ./cli.nix ];
+  imports = [
+    ./cli/default.nix
+    ./wayland/default.nix
+  ];
 
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 }
