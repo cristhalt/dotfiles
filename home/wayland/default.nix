@@ -12,5 +12,9 @@
     ];
   };
 
+  services.dunst.enable = true;
+
+  services.polkit-gnome.enable = true;
+
   programs.rofi.enable = true;
 }

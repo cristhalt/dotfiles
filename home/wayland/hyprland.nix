@@ -8,8 +8,14 @@
         vrr = 1;
       };
 
-      input = {
-        kb_layout = "fr";
+      general = {
+        gaps_in = 4;
+        gaps_out = 8;
+      };
+
+      decoration = {
+        rounding = 8;
+        rounding_power = 4.0;
       };
 
       # Keybinds

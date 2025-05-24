@@ -26,4 +26,5 @@
   };
 
   console.keyMap = "fr";
+  home-manager.users.cristhalt.wayland.windowManager.hyprland.settings.input.kb_layout = "fr";
 }
